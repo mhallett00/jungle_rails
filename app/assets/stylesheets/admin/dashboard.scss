@@ -1,11 +1,16 @@
-.card-container {
-  display: flex;
-  flex-direction: row;
-
   .card {
-    background-color: #cce5ff;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
     text-align: center;
-    margin-right: 1em;
-  }
+    padding: 2em;
+    color: #337ab7;
+        
+    .card-title {
+      font-size: 3em;
+    }
 
-}
+    .card-text {
+      font-size: 3em;
+    }
+    
+  }
