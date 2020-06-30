@@ -12,18 +12,16 @@ class User < ActiveRecord::Base
     end
   end
 
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence:true
 
   validates :email, presence: true
   validates :email, uniqueness: {case_sensitive: false}
+  validates :email, format: { without: /\s/, message: "cannot contain whitespace"}
 
   validates :password, presence: true
   validates :password, length: { minimum: 3 }
 
   validates :password_confirmation, presence: true
-
-  def self.strip_and_case(email)
-    formatted_email = email.strip.downcase
-  end
 
 end
